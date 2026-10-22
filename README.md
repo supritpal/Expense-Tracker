@@ -1,4 +1,4 @@
-# 💰 Cashflowly — Modern Full-Stack Expense Tracker
+#  Cashflowly — Modern Full-Stack Expense Tracker
 
 <div align="center">
 
@@ -14,13 +14,13 @@
   Take complete control of your finances: seamlessly track income, categorize expenditures, calculate real-time net balance, and manage your account securely.
 </p>
 
-[🚀 **Explore Live Application**](https://cashflowly.netlify.app/) • [✨ Features](#-key-features) • [🏗️ Architecture](#️-system-architecture) • [📡 API Reference](#-api-endpoints) • [💻 Local Setup](#-getting-started)
+[ **Explore Live Application**](https://cashflowly.netlify.app/) • [ Features](#-key-features) • [ Architecture](#️-system-architecture) • [ API Reference](#-api-endpoints) • [ Local Setup](#-getting-started)
 
 ---
 
 </div>
 
-## 🌐 Live Deployment
+##  Live Deployment
 
 | Service | Platform | URL |
 | :--- | :--- | :--- |
@@ -32,34 +32,34 @@
 
 ## ✨ Key Features
 
-- **📊 Real-Time Financial Dashboard**
+- ** Real-Time Financial Dashboard**
   - Instant summary cards highlighting **Total Income**, **Total Expenses**, and **Net Balance**.
   - Dynamic calculations updating automatically on every transaction change.
 
-- **💳 Complete Transaction Management (CRUD)**
+- ** Complete Transaction Management (CRUD)**
   - **Create**: Add transactions specifying title, numerical amount, and classification (*Income* vs *Spend*).
   - **Read**: Clean, tabular view of all user entries with formatted dates and color-coded status badges.
   - **Update**: Edit existing transactions seamlessly with pre-filled inputs.
   - **Delete**: Remove obsolete entries with confirmation safeguards.
 
-- **🔐 Robust Authentication & Security**
+- ** Robust Authentication & Security**
   - User registration & login with password encryption powered by **bcryptjs** (10 salt rounds).
   - Stateless authorization using **JSON Web Tokens (JWT)** passed via `Bearer` Authorization headers.
   - Protected client routes ensuring unauthenticated visitors cannot access sensitive financial data.
   - Automatic session cleanup and redirect upon token expiry.
 
-- **👤 User Profile Management**
+- ** User Profile Management**
   - View logged-in account details.
   - Update personal information (Full Name and Email) directly from the profile settings.
 
-- **🎨 Modern Glassmorphism UI**
+- ** Modern Glassmorphism UI**
   - Sophisticated dark mode color palette (`#0f2027` to `#2c5364`) with smooth gradients and cyan accents (`#00c6ff`).
   - Glassmorphic card styling with backdrop blur filters and elevated depth.
   - Fully responsive layout tailored for desktops, tablets, and smartphones.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **Library**: [React 19](https://react.dev/)
@@ -78,28 +78,28 @@
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```mermaid
 graph TD
-    User([👤 User / Client Browser]) -->|HTTPS / UI Interactions| Frontend[⚛️ React 19 SPA on Netlify]
-    Frontend -->|JWT Bearer Auth + JSON REST API| Backend[🚀 Express 5 API on Render]
-    Backend -->|Mongoose ODM Queries| Database[(🍃 MongoDB Atlas Cloud DB)]
+    User([ User / Client Browser]) -->|HTTPS / UI Interactions| Frontend[ React 19 SPA on Netlify]
+    Frontend -->|JWT Bearer Auth + JSON REST API| Backend[ Express 5 API on Render]
+    Backend -->|Mongoose ODM Queries| Database[( MongoDB Atlas Cloud DB)]
     
     subgraph Client Application
-        Frontend --> AuthState[🔐 LocalStorage Token Auth]
-        Frontend --> ProtectedViews[🛡️ Protected Routes: Dashboard / Profile / Transactions]
+        Frontend --> AuthState[ LocalStorage Token Auth]
+        Frontend --> ProtectedViews[ Protected Routes: Dashboard / Profile / Transactions]
     end
     
     subgraph Server Security & Logic
-        Backend --> JWTMiddleware[🔑 validateToken Middleware]
-        Backend --> BcryptHashing[🔒 Password Hashing]
+        Backend --> JWTMiddleware[ validateToken Middleware]
+        Backend --> BcryptHashing[ Password Hashing]
     end
 ```
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```text
 Expense-Tracker/
@@ -142,9 +142,9 @@ Expense-Tracker/
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
-### 🔑 Authentication & User (`/user`)
+###  Authentication & User (`/user`)
 
 | Method | Endpoint | Description | Auth Required |
 | :--- | :--- | :--- | :---: |
@@ -153,7 +153,7 @@ Expense-Tracker/
 | `GET` | `/user/me` | Retrieve profile of the logged-in user | ✅ Yes |
 | `PUT` | `/user/update` | Update full name and email address | ✅ Yes |
 
-### 💵 Transactions (`/transaction`)
+###  Transactions (`/transaction`)
 
 | Method | Endpoint | Description | Auth Required |
 | :--- | :--- | :--- | :---: |
@@ -165,7 +165,7 @@ Expense-Tracker/
 
 ---
 
-## 💻 Getting Started
+##  Getting Started
 
 Follow these steps to run the application locally on your machine.
 
@@ -238,7 +238,7 @@ cd Expense-Tracker
 
 ---
 
-## 🧪 Environment Variables Summary
+##  Environment Variables Summary
 
 ### Backend (`backend/.env`)
 
@@ -256,7 +256,7 @@ cd Expense-Tracker
 
 ---
 
-## 🗺️ Roadmap & Future Enhancements
+##  Roadmap & Future Enhancements
 
 - [ ] **Interactive Visualizations**: Graphical spending insights with Chart.js / Recharts.
 - [ ] **Data Export**: Export transaction records to CSV, Excel, and PDF formats.
@@ -266,7 +266,7 @@ cd Expense-Tracker
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -278,13 +278,13 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 📄 License
+##  License
 
 This project is open-source and available under the [ISC License](LICENSE).
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Suprit Pal**
 
